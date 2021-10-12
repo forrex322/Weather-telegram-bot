@@ -2,6 +2,7 @@ import requests
 import datetime
 from pprint import pprint
 from config import open_weather_token
+from main_weather_tg_bot import *
 
 def get_weather(city, open_weather_token):
 
@@ -43,6 +44,7 @@ def get_weather(city, open_weather_token):
 def main():
     city = input("Enter city: ")
     get_weather(city, open_weather_token)
+    executor.start_polling(dp)
 
 
 if __name__ == '__main__':
