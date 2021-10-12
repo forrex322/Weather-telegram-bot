@@ -42,8 +42,8 @@ def get_weather(city, open_weather_token):
 
 
 def main():
-    city = input("Enter city: ")
-    get_weather(city, open_weather_token)
+    # city = input("Enter city: ")
+    # get_weather(city, open_weather_token)
     executor.start_polling(dp)
 
 

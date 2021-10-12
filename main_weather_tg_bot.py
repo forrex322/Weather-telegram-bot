@@ -8,14 +8,14 @@ from aiogram import Bot, types
 from aiogram.dispatcher import Dispatcher
 from aiogram.utils import executor
 
-TOKEN = "2078368607:AAE9-srddBlsBUK4ZlomQ_QcjGE-UL6VcDM"
+TOKEN = "your_token"
 
 bot = Bot(token=TOKEN)
 dp = Dispatcher(bot)
 
 @dp.message_handler(commands=['start', 'help'])
 async def send_welcome(msg: types.Message):
-    await msg.reply_to_message(f'Я бот. Приятно познакомиться!')
+    await msg.reply(f'Я бот. Приятно познакомиться!')
 
 
 @dp.message_handler()
