@@ -1,5 +1,10 @@
 import requests
 import datetime
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
 
 import telebot
 
@@ -8,7 +13,7 @@ from aiogram import Bot, types
 from aiogram.dispatcher import Dispatcher
 from aiogram.utils import executor
 
-TOKEN = "your_token"
+TOKEN = os.getenv('TOKEN')
 
 bot = Bot(token=TOKEN)
 dp = Dispatcher(bot)
